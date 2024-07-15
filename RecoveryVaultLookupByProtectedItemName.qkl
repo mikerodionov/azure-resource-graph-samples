@@ -1,0 +1,4 @@
+RecoveryServicesResources 
+| where type in~ ('Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems')
+| where properties.friendlyName == 'RESOURCE_NAME'
+| project properties.vaultId, properties.policyInfo.nam
